@@ -12,8 +12,17 @@ class A(unittest.TestCase):
         button_checkbox.click()
 
     def test_multiply_checkbox(self):
-        button_option_one = self.driver.find_element_by_xpath('//button[contains(text(), "Option 1")]')
+        button_option_one = self.driver.find_element_by_xpath('//label[text()="Option 1"]')
         button_option_one.click()
+
+        button_option_two = self.driver.find_element_by_xpath('//label[text()="Option 2"]')
+        button_option_two.click()
+
+        button_option_three = self.driver.find_element_by_xpath('//label[text()="Option 3"]')
+        button_option_three.click()
+
+        button_option_four = self.driver.find_element_by_xpath('//label[text()="Option 4"]')
+        button_option_four.click()
 
         button_check_all = self.driver.find_element_by_id('check1')
         button_check_all.click()
